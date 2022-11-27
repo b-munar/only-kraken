@@ -14,11 +14,7 @@ Scenario: As an administrator user I create a page - Como usuario administrador 
   And I wait for 2 seconds
   And I click New Page
   And I wait for 2 seconds
-  And I enter title random title to the limit with faker
+  And I enter title random title to the limit with faker pseudo
   And I wait for 2 seconds
   And I enter content "$name_2"
   And I wait for 2 seconds
-  And I click Publish Dropdown
-  And I wait for 2 seconds
-  And I click Publish
-  And I wait for 3 seconds
