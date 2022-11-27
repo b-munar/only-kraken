@@ -14,7 +14,7 @@ Scenario: As an administrator user I create a page - Como usuario administrador 
   And I wait for 2 seconds
   And I click New Page
   And I wait for 2 seconds
-  And I enter title "<PAGETITLE>"
+  And I enter title "$name_1"
   And I wait for 2 seconds
   And I enter content "<PAGECONTENT>"
   And I wait for 2 seconds
