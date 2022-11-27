@@ -14,11 +14,14 @@ Scenario: As an administrator user I edit a post - Como usuario administrador ed
   And I wait for 1 seconds
   And I click any Post
   And I wait for 1 seconds
-  And I enter Post Title "edit-post-title"
+  And I enter Post Title "$name_1"
   And I wait for 1 seconds
-  And I enter Post content "edit-post-body"
+  And I enter Post content "$name_2"
   And I wait for 1 seconds
   And I click Publish Dropdown in Post
   And I wait for 1 seconds
   And I click Publish in Post
-  And I wait for 1 seconds
+  And I wait for 2 seconds
+  Then I click Post Back
+  And I wait for 2 seconds
+  Then I check the post is published with title "$$name_1"
