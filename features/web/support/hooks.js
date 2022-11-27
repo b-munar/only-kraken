@@ -1,7 +1,7 @@
 const { After, Before, AfterStep } = require("@cucumber/cucumber");
 const { WebClient } = require("kraken-node");
 const fs  = require("fs")
-const dataApriori = require('../../../apriori-data.json')
+const dataApriori = require('../../../MOCK-DATA.json')
 
 Before(async function () {
   this.deviceClient = new WebClient("chrome", {}, this.userId);
