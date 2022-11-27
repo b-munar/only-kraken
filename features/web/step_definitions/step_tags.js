@@ -46,7 +46,11 @@ When('I enter Tag Name {kraken-string}', async function(title){
     return await element.setValue(title);
   })
 
-
+  When('I enter tag description random description to the limit with faker', async function(){
+    let element = await this.driver.$('textarea[id="tag-description"]');
+    let title = faker.lorem.slug(500)
+    return await element.setValue(title);
+  })
 
 When('I enter Tag Description {kraken-string}', async function(title){
   let element = await this.driver.$('textarea[id="tag-description"]');
