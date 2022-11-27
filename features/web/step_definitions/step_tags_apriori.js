@@ -25,3 +25,21 @@ Then('I check the tag is published with title apriori', async function(){
   }));
   expect(isEqual).to.equal(true)
 })
+
+When('I enter tag description random description to the limit apriori', async function(){
+  let element = await this.driver.$('textarea[id="tag-description"]');
+  let title = this.apriori.sentence_big
+  return await element.setValue(title);
+})
+
+When('I enter tag name random title to the limit apriori', async function(){
+  let element = await this.driver.$('input[id="tag-name"]');
+  let title = this.apriori.sentence_big
+  return await element.setValue(title);
+})
+
+When('I check for error message in tags', async function(){
+  let element = await this.driver.$('span[class="error"]');
+  const text = await element.getText()
+  expect(text).to.equal("Tag names cannot be longer than 191 characters.");
+})
