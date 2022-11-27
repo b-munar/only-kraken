@@ -14,20 +14,12 @@ Scenario: As an administrator user I create a tag with the name and description 
   And I wait for 1 seconds
   And I click New Tags
   And I wait for 1 seconds
-  And I enter Tag Name "<NAME>"
-  And I wait for 1 seconds
-  And I enter Tag Description "$name_1"
-  And I wait for 1 seconds
-  And I click save for Tag
-  And I wait for 3 seconds
-  And I click Tags Back
-  And I wait for 2 seconds
-  And I click Tag "<NAME>"
+  And I enter Tag Name "$name_1"
   And I wait for 1 seconds
   And I enter Tag Description "$name_2"
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I click save for Tag
   And I wait for 3 seconds
   And I click Tags Back
   And I wait for 2 seconds
-  Then I check the tag is published with title "<NAME>"
+  Then I check the tag is published with title "$$name_1"
