@@ -19,3 +19,16 @@ Then('I check the invitation was sent to email apriori', async function(){
   }));
    expect(isEqual).to.equal(true)
 })
+
+When('I change Location to apriori', async function(){
+  let element = await this.driver.$('input[id="user-location"]');
+  const location = this.apriori.location
+  return await element.setValue(location);
+})
+
+Then('I check Location is updated to apriori', async function(){
+  let element = await this.driver.$('input[id="user-location"]');
+  let text = await element.getValue();
+  const location = this.apriori.location
+  expect(text).to.equal(location)
+})
