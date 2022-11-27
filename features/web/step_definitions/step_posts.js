@@ -12,12 +12,12 @@ When('I click New Post', async function(){
   return await element.click();
 })
 
-When('I enter Post Title {string}', async function(title){
+When('I enter Post Title {kraken-string}', async function(title){
     let element = await this.driver.$('textarea[placeholder="Post Title"]');
     return await element.setValue(title);
   })
 
-When('I enter Post content {string}', async function(content){
+When('I enter Post content {kraken-string}', async function(content){
   let element = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
   return await element.setValue(content);
 })
@@ -56,6 +56,23 @@ When('I click change time publish Post 2', async function(){
 When('I click Publish in Post', async function(){
   let element = await this.driver.$('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]');
   return await element.click();
+})
+
+When('I click Post Back', async function(){
+  let element = await this.driver.$('a[href="#/posts/"]');
+  return await element.click();
+})
+
+Then('I check the post is published with title {kraken-string}', async function(title){
+  let elements = await this.driver.$$('h3[class="gh-content-entry-title"]')
+  let isEqual = false;
+  await Promise.all(elements.map(async (element) => {
+    const text = await element.getText()
+    if(text === title){
+      isEqual = true;
+    }
+  }));
+  expect(isEqual).to.equal(true)
 })
 
 When('I click any Post', async function(){
