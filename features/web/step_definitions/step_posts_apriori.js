@@ -25,3 +25,9 @@ Then('I check the post is published with title apriori', async function(){
   }));
   expect(isEqual).to.equal(true)
 })
+
+When('I enter post title random title to the limit apriori', async function(){
+  let element = await this.driver.$('textarea[placeholder="Post Title"]');
+  let title = this.apriori.sentence_big
+  return await element.setValue(title);
+})
