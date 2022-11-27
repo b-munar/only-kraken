@@ -16,13 +16,13 @@ Scenario: As an administrator user I change password - Como usuario administrado
   And I wait for 1 seconds
   And I enter Old Password "<PASSWORD>"
   And I wait for 3 seconds
-  And I enter New Password "<PASSWORD_2>"
+  And I enter New Password "$email_1"
   And I wait for 3 seconds
-  And I enter Verify Password "<PASSWORD_2>"
+  And I enter Verify Password "$$email_1"
   And I wait for 3 seconds
   And I click Change Password
   And I wait for 3 seconds
-  And I enter Old Password "<PASSWORD_2>"
+  And I enter Old Password "$$email_1"
   And I wait for 3 seconds
   And I enter New Password "<PASSWORD>"
   And I wait for 3 seconds
