@@ -38,8 +38,14 @@ When('I enter tag name random title to the limit apriori', async function(){
   return await element.setValue(title);
 })
 
-When('I check for error message in tags', async function(){
+Then('I check for error message in tags', async function(){
   let element = await this.driver.$('span[class="error"]');
   const text = await element.getText()
   expect(text).to.equal("Tag names cannot be longer than 191 characters.");
+})
+
+Then('I check for error message description', async function(){
+  let element = await this.driver.$('div[class="form-group error ember-view"]');
+  const text = await element.getText()
+  expect(text).to.have.string("Description cannot be longer than 500 characters.");
 })
