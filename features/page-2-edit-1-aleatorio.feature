@@ -14,7 +14,7 @@ Scenario: As an administrator user I edit a page - Como usuario administrador ed
   And I wait for 2 seconds
   And I click New Page
   And I wait for 2 seconds
-  And I enter title "<EDITTITLE>"
+  And I enter title "$name_1"
   And I wait for 2 seconds
   And I enter content "<EDITCONTENT>"
   And I wait for 2 seconds
@@ -24,11 +24,11 @@ Scenario: As an administrator user I edit a page - Como usuario administrador ed
   And I wait for 3 seconds
   And I click Pages Back
   And I wait for 2 seconds
-  And I check the page is published with title "<EDITTITLE>"
+  And I check the page is published with title "$$name_1"
   And I wait for 2 seconds
-  And I click on the published page with title "<EDITTITLE>"
+  And I click on the published page with title "$$name_1"
   And I wait for 2 seconds
-  And I enter title "<EDITEDTITLE>"
+  And I enter title "$name_2"
   And I wait for 2 seconds
   And I click Update Dropdown
   And I wait for 2 seconds
@@ -36,4 +36,4 @@ Scenario: As an administrator user I edit a page - Como usuario administrador ed
   And I wait for 3 seconds
   Then I click Pages Back
   And I wait for 2 seconds
-  And I check the page is published with title "<EDITEDTITLE>"
+  And I check the page is published with title "$$name_2"

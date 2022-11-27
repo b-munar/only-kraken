@@ -16,7 +16,7 @@ Scenario: As an administrator user I create a page - Como usuario administrador 
   And I wait for 2 seconds
   And I enter title "$name_1"
   And I wait for 2 seconds
-  And I enter content "<PAGECONTENT>"
+  And I enter content "$name_2"
   And I wait for 2 seconds
   And I click Publish Dropdown
   And I wait for 2 seconds
@@ -24,4 +24,4 @@ Scenario: As an administrator user I create a page - Como usuario administrador 
   And I wait for 3 seconds
   And I click Pages Back
   And I wait for 2 seconds
-  Then I check the page is published with title "<PAGETITLE>"
+  Then I check the page is published with title "$$name_1"
