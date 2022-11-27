@@ -18,7 +18,7 @@
   "NEWNAME": "brahian",
   "NEWSLUG": "brahian",
   "NEWLOCATION": "Nueva ubicacion",
-  "HOST": "http://localhost:2370/ghost/",
+  "HOST": "http://localhost:2368/ghost/",
   "HOST2": "http://localhost:3002/ghost/",
   "NAME": "brahian"
 }

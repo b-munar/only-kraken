@@ -1,10 +1,14 @@
 const { After, Before, AfterStep } = require("@cucumber/cucumber");
 const { WebClient } = require("kraken-node");
 const fs  = require("fs")
+const dataApriori = require('../../../apriori-data.json')
 
 Before(async function () {
   this.deviceClient = new WebClient("chrome", {}, this.userId);
   this.driver = await this.deviceClient.startKrakenForUserId(this.userId);
+  const randomNumber = Math.floor(Math.random() * 499)
+  this.apriori = dataApriori[randomNumber]
+  this.apriori2 = dataApriori[randomNumber + 1]
 });
 
 After(async function () {
