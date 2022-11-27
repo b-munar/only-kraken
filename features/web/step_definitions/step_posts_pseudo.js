@@ -7,3 +7,10 @@ When('I enter post content faker pseudo', async function(){
     let content = faker.hacker.phrase()
     return await element.setValue(content);
   })
+
+When('I enter post title random title to the limit with faker pseudo', async function(){
+  let element = await this.driver.$('textarea[placeholder="Post Title"]');
+  let title = faker.lorem.words(100)
+  return await element.setValue(title);
+})
+  
