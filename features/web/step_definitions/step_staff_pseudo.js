@@ -10,6 +10,6 @@ When('I enter invite email faker pseudo', async function(){
 
 When('I change Location faker pseudo', async function(){
     let element = await this.driver.$('input[id="user-location"]');
-    let location = faker.location.city()
+    let location = faker.address.city()
     return await element.setValue(location);
 })

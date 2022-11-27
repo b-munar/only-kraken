@@ -26,8 +26,3 @@ Scenario: As an administrator user I update owner info - Como usuario administra
   And I wait for 2 seconds
   And I click on Owner
   And I wait for 2 seconds
-  Then I check Full name is updated to "<NEWNAME>"
-  And I wait for 2 seconds
-  And I check Slug is updated to "<NEWSLUG>"
-  And I wait for 2 seconds
-  And I check Location is updated to "$$name_1"
