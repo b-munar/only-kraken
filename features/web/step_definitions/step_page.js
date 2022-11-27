@@ -1,5 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
+const { faker } = require('@faker-js/faker');
 
 
 When('I click Pages', async function(){
@@ -14,6 +15,12 @@ When('I click New Page', async function(){
 
 When('I enter title {kraken-string}', async function(title){
   let element = await this.driver.$('textarea[placeholder="Page Title"]');
+  return await element.setValue(title);
+})
+
+When('I enter title random title to the limit with faker', async function(){
+  let element = await this.driver.$('textarea[placeholder="Page Title"]');
+  let title = faker.lorem.slug(50)
   return await element.setValue(title);
 })
 

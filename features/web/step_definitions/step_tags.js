@@ -1,5 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
+const { faker } = require('@faker-js/faker');
 
 When('I click Tags', async function(){
     let element = await this.driver.$('a[href="#/tags/"]');
@@ -36,6 +37,12 @@ When('I click New Tags', async function(){
 
 When('I enter Tag Name {kraken-string}', async function(title){
     let element = await this.driver.$('input[id="tag-name"]');
+    return await element.setValue(title);
+  })
+
+  When('I enter tag name random title to the limit with faker', async function(){
+    let element = await this.driver.$('input[id="tag-name"]');
+    let title = faker.lorem.slug(50)
     return await element.setValue(title);
   })
 

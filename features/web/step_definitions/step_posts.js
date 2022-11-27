@@ -1,5 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
+const { faker } = require('@faker-js/faker');
+
 
 When('I click Post', async function(){
     let element = await this.driver.$('a[href="#/posts/"]');
@@ -16,6 +18,12 @@ When('I enter Post Title {kraken-string}', async function(title){
     let element = await this.driver.$('textarea[placeholder="Post Title"]');
     return await element.setValue(title);
   })
+
+When('I enter post title random title to the limit with faker', async function(){
+  let element = await this.driver.$('textarea[placeholder="Post Title"]');
+  let title = faker.lorem.slug(50)
+  return await element.setValue(title);
+})
 
 When('I enter Post content {kraken-string}', async function(content){
   let element = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
