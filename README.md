@@ -48,5 +48,5 @@ Este JSON se genera antes de la ejecución de las pruebas, por lo que es apriori
 
 
 ### Pseudo aleatorio Y Aleatorio
-Estas dos estrategias utilizaron faker.js, pero las aleatorias normalente se utilizo el faker de kraken, y las aleatorias puras se utilizo faker puro.
+Estas dos estrategias utilizaron faker.js, pero las aleatorias normalente se utilizo el faker de kraken, y las aleatorias puras se utilizo faker puro. Estos datos se generan al momento de ejecutar los escenarios de pruebas, no antes.
 
