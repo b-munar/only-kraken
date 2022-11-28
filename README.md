@@ -17,6 +17,22 @@ Importante tener corriendo las versiones de ghost que se quieren probar.
 1. Ejecute el comando npm run kraken-node-run
 1. Cada archivo de pruebas se ejecutará y los resultados se almacenarán en la carpeta reports. Los screenshots se almacenarán en la carpeta screenshots.
 
+Herramienta de pruebas: Kraken
 
 Versión de Ghost: 3.41.1
+
+## Reporte de incidencias visuales
+
+En el siguiente enlace se encuentran las 5 incidencias visuales encontradas:
+
+[Reporte Incidencias](https://github.com/catorrese/pruebas_automatizadas_grupo14/issues)
+
+## Estategias de generación de datos
+
+### Pool de datos a priori
+
+### Pseudo aleatorio
+
+### Aleatorio
+
 
