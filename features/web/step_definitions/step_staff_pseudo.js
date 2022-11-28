@@ -13,3 +13,15 @@ When('I change Location faker pseudo', async function(){
     let location = faker.address.city()
     return await element.setValue(location);
 })
+
+When('I enter empty invite email faker pseudo', async function(){
+  let element = await this.driver.$('input[placeholder="Email Address"]');
+  const email = '';
+  return await element.setValue(email);
+})
+
+When('I enter not email invite email faker pseudo', async function(){
+  let element = await this.driver.$('input[placeholder="Email Address"]');
+  const email = faker.hacker.phrase()
+  return await element.setValue(email);
+})
