@@ -27,3 +27,12 @@ En el siguiente enlace se encuentran las 5 incidencias visuales encontradas:
 
 [Reporte Incidencias](https://github.com/catorrese/pruebas_automatizadas_grupo14/issues)
 
+## Estategias de generación de datos
+
+### Pool de datos a priori
+
+### Pseudo aleatorio
+
+### Aleatorio
+
+
