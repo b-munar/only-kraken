@@ -21,18 +21,22 @@ Herramienta de pruebas: Kraken
 
 Versión de Ghost: 3.41.1
 
+Versión de Node: 14.20.1
+
 ## Reporte de manejo de datos inválidos
 
 En el siguiente enlace se encuentran las 10 incidencias de manejo de datos inválidos:
 
 [Reporte Incidencias](https://github.com/catorrese/pruebas_automatizadas_grupo14/issues)
 
+## Nota
+El equipo al ser de solo dos personas, se hicieron 60 escenarios, osea 30 escenarios por persona, para verlos en detalle, puede ver el documento escenarios.ods (una hoja de calculo en formato libre)
+
 ## Estategias de generación de datos
 
 ### Pool de datos a priori
+Esta estrategia utilizo de lleno la herramienta de Mockaroo.
 
-### Pseudo aleatorio
-
-### Aleatorio
-
+### Pseudo aleatorio Y Aleatorio
+Estas dos estrategias utilizaron faker.js, pero las aleatorias normalente se utilizo el faker de kraken, y las aleatorias puras se utilizo faker puro.
 
