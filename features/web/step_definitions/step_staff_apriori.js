@@ -39,8 +39,20 @@ When('I enter empty invite email apriori', async function(){
   return await element.setValue(email);
 })
 
+When('I enter not email invite email apriori', async function(){
+  let element = await this.driver.$('input[placeholder="Email Address"]');
+  const email = this.apriori.title
+  return await element.setValue(email);
+})
+
 Then('I check for empty error staff', async function(){
   let element = await this.driver.$('div[class="form-group error ember-view"]');
   let text = await element.getText();
   expect(text).to.have.string('Please enter an email.')
+})
+
+Then('I check for invalid error staff', async function(){
+  let element = await this.driver.$('div[class="form-group error ember-view"]');
+  let text = await element.getText();
+  expect(text).to.have.string('Invalid Email.')
 })

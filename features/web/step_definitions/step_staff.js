@@ -151,3 +151,9 @@ When('I enter empty invite email faker', async function(){
   const email = faker.lorem.lines(0)
   return await element.setValue(email);
 })
+
+When('I enter not email invite email faker', async function(){
+  let element = await this.driver.$('input[placeholder="Email Address"]');
+  const email = faker.lorem.sentence()
+  return await element.setValue(email);
+})
