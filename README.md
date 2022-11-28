@@ -21,9 +21,9 @@ Herramienta de pruebas: Kraken
 
 Versión de Ghost: 3.41.1
 
-## Reporte de incidencias visuales
+## Reporte de manejo de datos inválidos
 
-En el siguiente enlace se encuentran las 5 incidencias visuales encontradas:
+En el siguiente enlace se encuentran las 10 incidencias de manejo de datos inválidos:
 
 [Reporte Incidencias](https://github.com/catorrese/pruebas_automatizadas_grupo14/issues)
 
