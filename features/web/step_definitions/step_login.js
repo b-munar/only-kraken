@@ -37,3 +37,9 @@ When('I enter email random email to the limit with faker', async function(){
   let title = faker.lorem.slug(50)
   return await element.setValue(title);
 })
+
+When('I enter password random password to the limit with faker', async function(){
+  let element = await this.driver.$('input[placeholder="Password"]');
+  let title = faker.lorem.slug(50)
+  return await element.setValue(title);
+})
