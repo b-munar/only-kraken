@@ -35,7 +35,16 @@ El equipo al ser de solo dos personas, se hicieron 60 escenarios, osea 30 escena
 ## Estategias de generación de datos
 
 ### Pool de datos a priori
-Esta estrategia utilizo de lleno la herramienta de Mockaroo.
+
+Esta estrategia utilizó la herramienta Mockaroo para generar el pool de datos, siguiendo el siguiente esquema de generación:
+
+![image](https://user-images.githubusercontent.com/53886791/204195250-5414c0ce-a2cb-4bbe-b6e3-906a72ecd93a.png)
+
+Se generaron 500 filas de datos y en cada escenario se escoge una fila aleatoriamente. El JSON generado se puede apreciar en la siguiente imagen:
+
+![image](https://user-images.githubusercontent.com/53886791/204195135-227fa6e7-f8b7-4cda-9d32-29bc1c03ee9b.png)
+
+
 
 ### Pseudo aleatorio Y Aleatorio
 Estas dos estrategias utilizaron faker.js, pero las aleatorias normalente se utilizo el faker de kraken, y las aleatorias puras se utilizo faker puro.
