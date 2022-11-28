@@ -44,6 +44,7 @@ Se generaron 500 filas de datos y en cada escenario se escoge una fila aleatoria
 
 ![image](https://user-images.githubusercontent.com/53886791/204195135-227fa6e7-f8b7-4cda-9d32-29bc1c03ee9b.png)
 
+Este JSON se genera antes de la ejecución de las pruebas, por lo que es apriori.
 
 
 ### Pseudo aleatorio Y Aleatorio
