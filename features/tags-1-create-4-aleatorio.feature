@@ -1,7 +1,7 @@
-Feature: Create Tag apriori - Crear Tag
+Feature: Create Tag faker - Crear Tag
 
 @user1 @web
-Scenario: As an administrator user I create a tag with the name and description apriori - Como usuario administrador creo un tags con el nombre y descripcion
+Scenario: As an administrator user I create a tag with the name and description faker - Como usuario administrador creo un tags con el nombre y descripcion
   Given I navigate to page "<HOST>"
   And I wait for 2 seconds
   When I enter email "<USERNAME>"
@@ -14,9 +14,9 @@ Scenario: As an administrator user I create a tag with the name and description 
   And I wait for 1 seconds
   And I click New Tags
   And I wait for 1 seconds
-  And I enter no tag name apriori
+  And I enter no tag name random
   And I wait for 1 seconds
-  And I enter Tag Description apriori
+  And I enter Tag Description "$name_2"
   And I wait for 1 seconds
   And I click save for Tag
   And I wait for 3 seconds

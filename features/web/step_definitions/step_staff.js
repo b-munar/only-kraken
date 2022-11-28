@@ -145,14 +145,3 @@ When('I click Send invitation V4.44', async function(){
   return await element.click();
 })
 
-When('I enter no tag name', async function(){
-  let element = await this.driver.$('input[id="tag-name"]');
-  const title = this.apriori.blank
-  return await element.setValue(title);
-})
-
-Then('I check for empty error message in tags', async function(){
-  let element = await this.driver.$('span[class="error"]');
-  const text = await element.getText()
-  expect(text).to.equal("You must specify a name for the tag.");
-})
