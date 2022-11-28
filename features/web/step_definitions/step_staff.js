@@ -163,3 +163,9 @@ When('I change Location too large to faker', async function(){
   const location = faker.lorem.slug(500)
   return await element.setValue(location);
 })
+
+When('I change email to invalid faker', async function(){
+  let element = await this.driver.$('input[id="user-email"]');
+  const email = faker.lorem.word()
+  return await element.setValue(email);
+})
