@@ -32,3 +32,15 @@ Then('I check Location is updated to apriori', async function(){
   const location = this.apriori.location
   expect(text).to.equal(location)
 })
+
+When('I enter empty invite email apriori', async function(){
+  let element = await this.driver.$('input[placeholder="Email Address"]');
+  const email = this.apriori.blank
+  return await element.setValue(email);
+})
+
+Then('I check for empty error staff', async function(){
+  let element = await this.driver.$('div[class="form-group error ember-view"]');
+  let text = await element.getText();
+  expect(text).to.have.string('Please enter an email.')
+})

@@ -1,5 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
+const { faker } = require('@faker-js/faker');
 
 When('I click Staff', async function(){
   let element = await this.driver.$('a[href="#/staff/"]');
@@ -145,3 +146,8 @@ When('I click Send invitation V4.44', async function(){
   return await element.click();
 })
 
+When('I enter empty invite email faker', async function(){
+  let element = await this.driver.$('input[placeholder="Email Address"]');
+  const email = faker.lorem.lines(0)
+  return await element.setValue(email);
+})
