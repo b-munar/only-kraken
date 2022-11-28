@@ -144,3 +144,4 @@ When('I click Send invitation V4.44', async function(){
   let element = await this.driver.$('button[class="gh-btn gh-btn-black gh-btn-icon ember-view"]');
   return await element.click();
 })
+
