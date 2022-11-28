@@ -157,3 +157,9 @@ When('I enter not email invite email faker', async function(){
   const email = faker.lorem.sentence()
   return await element.setValue(email);
 })
+
+When('I change Location too large to faker', async function(){
+  let element = await this.driver.$('input[id="user-location"]');
+  const location = faker.lorem.slug(500)
+  return await element.setValue(location);
+})

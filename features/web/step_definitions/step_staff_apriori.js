@@ -56,3 +56,15 @@ Then('I check for invalid error staff', async function(){
   let text = await element.getText();
   expect(text).to.have.string('Invalid Email.')
 })
+
+When('I change Location too large to apriori', async function(){
+  let element = await this.driver.$('input[id="user-location"]');
+  const location = this.apriori.sentence_big
+  return await element.setValue(location);
+})
+
+Then('I check Location error', async function(){
+  let element = await this.driver.$('div[class="form-group error ember-view"]');
+  let text = await element.getText();
+  expect(text).to.have.string('Location is too long')
+})
